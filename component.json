@@ -1,0 +1,13 @@
+{
+  "name": "box-muller",
+  "repo": "karlbohlmark/box-muller",
+  "description": "Box-Muller normal distribution generator",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {},
+  "development": {},
+  "license": "MIT",
+  "scripts": [
+    "index.js"
+  ]
+}

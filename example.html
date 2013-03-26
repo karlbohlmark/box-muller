@@ -1,0 +1,39 @@
+<!doctype html>
+<meta charset="utf-8">
+<canvas></canvas>
+
+<script src="build/build.js"></script>
+<script>
+	var canvas = document.querySelector('canvas')
+		, width = 300
+		, height = 180
+	canvas.width = width
+	canvas.height = height
+	
+	var boxmuller = require('box-muller')
+		, bins = []
+		, val
+		, bin
+	
+	for (var i=0;i<100000;i++) {
+		val = boxmuller()
+		bin = Math.floor((val + 3)*4)
+		bins[bin] = (bins[bin] || 0) + 1
+	}
+
+	var max = bins.reduce(function max(acc, cur) {
+		return acc > cur ? acc : cur
+	}, -Infinity)
+
+	var ctx = canvas.getContext('2d')
+	   , x
+	   , y
+		 , barwidth = width / 24
+
+	for (var i=0; i<bins.length; i++) {
+		ctx.beginPath()
+		ctx.arc((i + 0.5)*barwidth, height-(bins[i]/max)*height, 1, 0, 2 * Math.PI, true)
+		ctx.fill()
+	}
+
+</script>

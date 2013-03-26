@@ -1,0 +1,11 @@
+{
+  "name": "box-muller",
+  "version": "0.0.1",
+  "description": "Box-Muller normal distribution generator",
+  "main": "index.js",
+  "scripts": {
+  },
+  "repository": "git@github.com:karlbohlmark/box-muller.git",
+  "author": "Karl Böhlmark <karl.bohlmark@gmail.com>",
+  "license": "BSD"
+}
